@@ -1,0 +1,35 @@
+<html>
+<body>    
+<head>
+    <title> FWI Prediction Calculator</title>
+    <link rel='stylesheet' href='static/style.css'>
+</head>
+<h1>Welcome to Forest Fire Prediction Page</h1>
+<form action='/predict_FWI' method="post">
+    <label><p>Enter Different Parameter Values</p></label>
+    <label for='Temperature'>Temperature :</label>
+    <input type='text' name='Temperature' id='Temperature' placeholder='enter between 20-40' required='required'><br><br>
+    <label for='RH'>RH   :</label>
+    <input type='text' name='RH' id='RH' placeholder='enter between 20-90' required='required'><br><br>
+    <label for='WS'>WS     :</label>
+    <input type='text' name='WS' id='WS' placeholder='enter between 5-30' required='required'><br><br>
+    <label for='Rain'>Rain   :</label>
+    <input type='text' name='Rain' id='Rain' placeholder='enter between 0-18'required='required'><br><br>
+    <label for='FFMC'>FFMC  :</label>
+    <input type='text' name='FFMC' id='FFMC' placeholder='enter between 30-90' required='required'><br><br>
+    <label for='DMC'>DMC  :</label>
+    <input type='text' name='DMC' placeholder='enter between 0-60' required='required'><br><br>
+    <label for='ISI'>ISI :</label>
+    <input type='text' name='ISI'id='ISI' placeholder='enter between 0-20' required='required'><br><br>
+    <label for='Classes'>Classes  :</label>
+    <input type='text' name='Classes' id='Classes' placeholder='1 for Fire & 0 for Not fire 'required='required'><br><br>
+    <label for='Region'>Region  :</label>
+    <input type='text' name='Region' id ='Region' placeholder='0 or 1'required='required'/><br><br>
+
+    <input type='submit' value='Predict'>
+
+</form>
+
+<h2>Prediction of FWI is {{results}}</h2>
+</body>
+</html>
